@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "paysum.py", 
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/payment-summary",
+        "dest": "paysum.py"  
+      }
+    ]
+  }
+  
