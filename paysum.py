@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Set your Stripe secret key from environment variable
-stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
 @app.route("/payment-summary", methods=["GET"])
 def payment_summary():
